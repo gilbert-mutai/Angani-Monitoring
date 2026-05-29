@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 56" width="220" height="56">
+  <defs>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0.8"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon: bar chart with trend line -->
+  <rect x="4"  y="36" width="7" height="16" rx="1.5" fill="url(#barGrad)" opacity="0.8"/>
+  <rect x="14" y="28" width="7" height="24" rx="1.5" fill="url(#barGrad)" opacity="0.85"/>
+  <rect x="24" y="18" width="7" height="34" rx="1.5" fill="url(#barGrad)" opacity="0.9"/>
+  <rect x="34" y="22" width="7" height="30" rx="1.5" fill="url(#barGrad)"/>
+
+  <!-- Trend line overlaid on bars -->
+  <polyline
+    points="7.5,38 17.5,30 27.5,20 37.5,24"
+    fill="none"
+    stroke="url(#lineGrad)"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+
+  <!-- Endpoint dot -->
+  <circle cx="37.5" cy="24" r="3" fill="#06b6d4"/>
+
+  <!-- Wordmark -->
+  <text x="52" y="28"
+        font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="15"
+        font-weight="700"
+        letter-spacing="1"
+        fill="#f1f5f9">ANGANI</text>
+  <text x="52" y="44"
+        font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="9"
+        font-weight="400"
+        letter-spacing="3"
+        fill="#64748b">MONITOR</text>
+</svg>

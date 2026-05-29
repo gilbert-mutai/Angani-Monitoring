@@ -1,0 +1,15 @@
+# Credentials — never commit these
+monitoring-stack/.env
+
+# Backup archives
+monitoring-stack/backups/
+
+# TLS certificates
+monitoring-stack/nginx/ssl/*.pem
+monitoring-stack/nginx/ssl/*.crt
+monitoring-stack/nginx/ssl/*.key
+
+# OS / editor noise
+.DS_Store
+*.swp
+*.swo

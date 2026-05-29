@@ -1,0 +1,238 @@
+/* =================================================================
+   Angani Monitor — Custom Grafana Branding
+   To adapt for a different client, change the CSS variables below.
+   ================================================================= */
+
+:root {
+  --brand-primary:     #3b82f6;   /* Blue - main accent */
+  --brand-secondary:   #6366f1;   /* Indigo - secondary accent */
+  --brand-accent:      #06b6d4;   /* Cyan - highlights */
+  --brand-success:     #10b981;   /* Green */
+  --brand-warning:     #f59e0b;   /* Amber */
+  --brand-danger:      #ef4444;   /* Red */
+
+  --brand-bg:          #0f172a;   /* Main background - dark navy */
+  --brand-bg-card:     #1e293b;   /* Card / panel background */
+  --brand-bg-sidebar:  #0f172a;   /* Sidebar */
+  --brand-bg-nav:      #1e293b;   /* Top nav bar */
+  --brand-border:      #334155;   /* Borders */
+
+  --brand-text:        #f1f5f9;   /* Primary text */
+  --brand-text-muted:  #94a3b8;   /* Muted text */
+  --brand-text-dim:    #64748b;   /* Dimmed text */
+}
+
+/* ----------------------------------------------------------------
+   Global background
+   ---------------------------------------------------------------- */
+body,
+.main-view,
+[class*="page-"] {
+  background-color: var(--brand-bg) !important;
+}
+
+/* ----------------------------------------------------------------
+   Top navigation bar
+   ---------------------------------------------------------------- */
+header[class*="navbar"],
+.navbar,
+[data-testid="navbar"] {
+  background: var(--brand-bg-nav) !important;
+  border-bottom: 1px solid var(--brand-border) !important;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* ----------------------------------------------------------------
+   Sidebar / left menu
+   ---------------------------------------------------------------- */
+nav[class*="SideMenu"],
+[class*="sidemenu"],
+aside[class*="menu"] {
+  background-color: var(--brand-bg-sidebar) !important;
+  border-right: 1px solid var(--brand-border) !important;
+}
+
+[class*="sidemenu-item"]:hover,
+[class*="SideMenu"] li:hover {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+}
+
+/* ----------------------------------------------------------------
+   Dashboard panels
+   ---------------------------------------------------------------- */
+[class*="panel-container"],
+[class*="PanelChrome"],
+.grafana-panel {
+  background-color: var(--brand-bg-card) !important;
+  border: 1px solid var(--brand-border) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+[class*="panel-title"],
+[class*="PanelChrome__title"] {
+  color: var(--brand-text) !important;
+  font-weight: 600 !important;
+}
+
+/* ----------------------------------------------------------------
+   Login page
+   ---------------------------------------------------------------- */
+[class*="LoginPage"],
+[class*="login-page"],
+[class*="login-container"] {
+  background: var(--brand-bg) !important;
+}
+
+/* Login gradient background */
+[class*="loginBackground"],
+[class*="login-bg"] {
+  background: linear-gradient(
+    135deg,
+    var(--brand-bg) 0%,
+    #1e1b4b 45%,
+    var(--brand-bg) 100%
+  ) !important;
+}
+
+/* Login form box */
+[class*="loginFormWrapper"],
+[class*="login-form"] {
+  background: var(--brand-bg-card) !important;
+  border: 1px solid var(--brand-border) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Login inputs */
+[class*="loginFormWrapper"] input,
+[class*="login-form"] input {
+  background: var(--brand-bg) !important;
+  border-color: var(--brand-border) !important;
+  color: var(--brand-text) !important;
+  border-radius: 6px !important;
+}
+
+[class*="loginFormWrapper"] input:focus,
+[class*="login-form"] input:focus {
+  border-color: var(--brand-primary) !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3) !important;
+}
+
+/* ----------------------------------------------------------------
+   Primary buttons (Sign in, Save, Apply, etc.)
+   ---------------------------------------------------------------- */
+button[class*="css-"][class*="primary"],
+[class*="btn-primary"],
+[class*="Button"][class*="primary"] {
+  background: linear-gradient(
+    90deg,
+    var(--brand-primary) 0%,
+    var(--brand-secondary) 100%
+  ) !important;
+  border-color: var(--brand-primary) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3) !important;
+}
+
+button[class*="css-"][class*="primary"]:hover,
+[class*="btn-primary"]:hover {
+  background: linear-gradient(
+    90deg,
+    var(--brand-secondary) 0%,
+    var(--brand-primary) 100%
+  ) !important;
+}
+
+/* ----------------------------------------------------------------
+   Dashboard grid background
+   ---------------------------------------------------------------- */
+[class*="react-grid-layout"],
+[class*="DashboardGrid"],
+[class*="gridster"] {
+  background-color: var(--brand-bg) !important;
+}
+
+/* ----------------------------------------------------------------
+   Dropdown menus, tooltips, popovers
+   ---------------------------------------------------------------- */
+[class*="DropdownMenu"],
+[class*="menu__content"],
+[class*="Select__menu"] {
+  background-color: var(--brand-bg-card) !important;
+  border: 1px solid var(--brand-border) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* ----------------------------------------------------------------
+   Time range picker
+   ---------------------------------------------------------------- */
+[class*="TimePickerCalendar"],
+[class*="TimePicker"] {
+  background: var(--brand-bg-card) !important;
+  border-color: var(--brand-border) !important;
+}
+
+/* ----------------------------------------------------------------
+   Tooltips
+   ---------------------------------------------------------------- */
+[class*="Tooltip__content"],
+.tooltip-inner {
+  background: var(--brand-bg-card) !important;
+  border: 1px solid var(--brand-border) !important;
+  color: var(--brand-text) !important;
+  border-radius: 6px !important;
+}
+
+/* ----------------------------------------------------------------
+   Scrollbars
+   ---------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--brand-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--brand-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-primary);
+}
+
+/* ----------------------------------------------------------------
+   Tables (alert list, user list, etc.)
+   ---------------------------------------------------------------- */
+[class*="FilterTable"],
+[class*="DynamicTable"] {
+  background: var(--brand-bg-card) !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--brand-border) !important;
+}
+
+[class*="FilterTable"] thead tr,
+[class*="DynamicTable"] thead tr {
+  background: rgba(51, 65, 85, 0.5) !important;
+}
+
+/* ----------------------------------------------------------------
+   Stat / BigValue panels
+   ---------------------------------------------------------------- */
+[class*="BigValue__title"] {
+  color: var(--brand-text-muted) !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* ----------------------------------------------------------------
+   Hide Grafana update notifications and telemetry links
+   ---------------------------------------------------------------- */
+[class*="UpdatePlugin"],
+[data-testid="footer"],
+[class*="grafana-com"],
+a[href*="grafana.com/blog"] {
+  display: none !important;
+}
