@@ -1,13 +1,13 @@
 # Credentials — never commit these
-monitoring-stack/.env
+.env
 
 # Backup archives
-monitoring-stack/backups/
+backups/
 
 # TLS certificates
-monitoring-stack/nginx/ssl/*.pem
-monitoring-stack/nginx/ssl/*.crt
-monitoring-stack/nginx/ssl/*.key
+nginx/ssl/*.pem
+nginx/ssl/*.crt
+nginx/ssl/*.key
 
 # OS / editor noise
 .DS_Store
